@@ -81,6 +81,11 @@ function slider() {
   var slider = $('.gallery-slider'),
       sliderNav = $('.gallery-nav__list');
   
+  $().fancybox({
+    selector : '.gallery-slider__slide:not(.slick-cloned) .gallery-slider__container',
+    backFocus : false
+  });
+
   slider.slick({
     slidesToShow: 3,
     slidesToScroll: 3,
@@ -156,3 +161,15 @@ function clientsSlider() {
     ]
   });  
 }
+
+$(document).on('click', '.slick-cloned', function(e) {
+  var $slides = $(this)
+    .parent()
+    .children('.slick-slide:not(.slick-cloned)').find('.gallery-slider__container');
+
+  $slides
+    .eq( ( $(this).attr("data-slick-index") || 0) % $slides.length )
+    .trigger("click.fb-start", { $trigger: $(this) });
+
+  return false;
+});

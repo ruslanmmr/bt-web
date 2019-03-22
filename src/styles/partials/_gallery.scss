@@ -1,5 +1,7 @@
 .gallery {
   &__content {
+    position: relative;
+    left: 0;
     overflow: hidden;
   }
   .container {
