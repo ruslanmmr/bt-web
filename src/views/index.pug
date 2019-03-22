@@ -3,6 +3,21 @@ head
   include blocks/head
 body
   include blocks/header
+  +header()
+    nav.nav.sl--scrollable
+      ul.nav__list
+        li.nav__item
+          a(href="#about").nav__link Компания
+        li.nav__item
+          a(href="#services").nav__link Услуги
+        li.nav__item
+          a(href="#gallery").nav__link Мероприятия
+        li.nav__item
+          a(href="#partners").nav__link Партнеры
+        li.nav__item
+          a(href="#clients").nav__link Клиенты
+        li.nav__item
+          a(href="#contacts").nav__link Контакты
   include blocks/home
   main.main
     include blocks/advantages

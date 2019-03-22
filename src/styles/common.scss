@@ -30,6 +30,9 @@ p {
 }
 .main {
 	margin-top: -125px;
+	&_style2 {
+		margin: 0;
+	}
 }
 .icon {
 	width: 50px;
@@ -89,6 +92,7 @@ p {
 	padding-bottom: 50px;
 	letter-spacing: 0.08em;
 	text-transform: uppercase;
+	line-height: 1.4em;
 	.icon {
 		height: 1.38em;
 		width: 3.6em;
@@ -107,6 +111,67 @@ p {
 		color: #fff;
 	}
 }
+//fancybox
+.fancybox-bg {
+	background: #fff;
+}
+.fancybox-button--zoom,
+.fancybox-button--play,
+.fancybox-button--thumbs,
+.fancybox-infobar {
+	display: none !important;
+}
+.fancybox-button--close {
+	background-color: transparent;
+	right: 15px;
+	top: 15px;
+	width: 50px;
+	height: 50px;
+	padding: 7.5px;
+	transition: 0.3s;
+	svg {
+		width: 35px;
+		height: 35px;
+	}
+	svg path {
+		fill: #ccc;
+		transition: 0.3s;
+	}
+	&:hover {
+		background: #fff;
+		svg path {
+			fill: #000;
+		}
+	}
+}
+.fancybox-navigation .fancybox-button {
+	padding: 0;
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	background: transparent;
+	border: 1px solid #ccc;
+	transition: 0.3s !important;
+	svg path {
+		transition: 0.3s;
+	}
+	&:hover {
+		background-color: #fff;
+		border: 1px solid #000;
+		svg path {
+			fill: #000;
+		}
+	}
+}
+.fancybox-navigation .fancybox-button--arrow_right {
+	right: 15px;
+	top: calc(50% - 25px);
+}
+.fancybox-navigation .fancybox-button--arrow_left {
+	left: 15px;
+	top: calc(50% - 25px);
+}
+
 @media all and(max-width: 768px) {
 	.title {
 		font-size: 30px;
@@ -118,8 +183,8 @@ p {
 		padding: 1.7em 0 25px 0 !important;
 		text-align: center;
 		.icon {
-			left: 50%;
-			transform: translateX(-50%);
+			left: 50% !important;
+			transform: translateX(-50%) !important;
 		}
 	}
 	.button_style1 {
@@ -147,4 +212,7 @@ p {
 @import "./partials/clients";
 @import "./partials/reviews";
 @import "./partials/contacts";
+@import "./partials/projects";
+@import "./partials/directions";
+@import "./partials/offer";
 @import "./partials/footer";

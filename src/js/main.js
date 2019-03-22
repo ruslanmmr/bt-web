@@ -1,5 +1,8 @@
 $(document).ready(function () {
   landingScroll();
+  backgroundSizing();
+  slider();
+  clientsSlider();
 });
 
 //якорные ссылки
@@ -73,4 +76,83 @@ function landingScroll() {
       body.removeClass("in-scroll");
     }, 400)
   });
+}
+function slider() {
+  var slider = $('.gallery-slider'),
+      sliderNav = $('.gallery-nav__list');
+  
+  slider.slick({
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    dots: false,
+    arrows: true,
+    asNavFor: '.gallery-nav__list',
+    draggable: false,
+    speed: 300,
+    swipe: false,
+    infinite: true,
+    nextArrow: '.gallery-controls__next',
+    prevArrow: '.gallery-controls__prev',
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });  
+  sliderNav.slick({
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    asNavFor: '.gallery-slider',
+    dots: false,
+    arrows: false,
+    focusOnSelect: true,
+    draggable: false,
+    speed: 0,
+    swipe: false,
+    variableWidth: true,
+  });
+}
+function clientsSlider() {
+  var slider = $('.clients-slider');
+
+  slider.slick({
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    dots: false,
+    arrows: true,
+    draggable: false,
+    speed: 300,
+    swipe: false,
+    infinite: true,
+    nextArrow: '.clients__next',
+    prevArrow: '.clients__prev',
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3
+        }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          adaptiveHeight: true
+        }
+      }
+    ]
+  });  
 }

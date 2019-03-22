@@ -1,24 +1,12 @@
-.header
-  .container
-    .header__container
-      .logo
-        a(href="#").logo__link
-          img(src="img/logos/logo.png", alt="").logo__image
-      nav.nav.sl--scrollable
-        ul.nav__list
-          li.nav__item
-            a(href="#about").nav__link Компания
-          li.nav__item
-            a(href="#services").nav__link Услуги
-          li.nav__item
-            a(href="#gallery").nav__link Мероприятия
-          li.nav__item
-            a(href="#partners").nav__link Партнеры
-          li.nav__item
-            a(href="#clients").nav__link Клиенты
-          li.nav__item
-            a(href="#contacts").nav__link Контакты
-      a(href="#").mobile-button
-        span
-      span.overlay
-          
+mixin header()
+  .header
+    .container
+      .header__container
+        .logo
+          a(href="index.html").logo__link
+            img(src="img/logos/logo.png", alt="").logo__image
+        block
+        a(href="#").mobile-button
+          span
+        span.overlay
+            

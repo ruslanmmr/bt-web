@@ -98,7 +98,7 @@
   flex-direction: column;
   &__next,
   &__prev {
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid #ccc;
     transition: 0.3s;
     outline: none;
     background: transparent;
@@ -111,12 +111,16 @@
     border-radius: 100%;
     cursor: pointer;
     .icon {
-      fill: #fff;
+      fill: #ccc;
       width: 20px;
       height: 20px;
+      transition: 0.3s;
     }
     &:hover {
       border-color: #fff;
+      .icon {
+        fill: #fff;
+      }
     }
   }
   &__prev {

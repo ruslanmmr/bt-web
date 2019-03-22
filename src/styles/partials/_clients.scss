@@ -4,7 +4,7 @@
   }
   &__next,
   &__prev {
-    border: 1px solid #d8d7d7;
+    border: 1px solid #ccc;
     transition: 0.3s;
     outline: none;
     background: transparent;
@@ -20,7 +20,7 @@
     margin-top: -25px;
     cursor: pointer;
     .icon {
-      fill: #d8d7d7;
+      fill: #ccc;
       width: 20px;
       height: 20px;
       transition: 0.3s;
