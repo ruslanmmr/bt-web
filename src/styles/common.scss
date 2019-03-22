@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Exo+2:300,400,700&subset=cyrillic');
+
+body {
+  text-rendering: optimizeSpeed;
+  font: 16px 'Exo 2', sans-serif;
+  min-width: 320px;
+  color: #000;
+  position: relative;
+  overflow-x: hidden;
+  transition: transform 0.3s;
+	min-width: 320px;
+	background-color: #fafafa;
+}
+p {
+	line-height: 1.5em;
+}
+.container {
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 3;
+}
+.main {
+	margin-top: -125px;
+}
+.icon {
+	width: 50px;
+	height: 50px;
+}
+.button {
+	display: inline-block;
+	outline: none;
+	text-decoration: none;
+	font-size: 18px;
+	text-transform: uppercase;
+	font-weight: bold;
+	transition: 0.3s;
+	letter-spacing: 0.1em;
+	&_style1 {
+		background-color: #fff;
+		padding: 15px 80px;
+		color: #000;
+		&:hover {
+			background-color: #000;
+			color: #fff;
+		}
+	}
+}
+.block {
+	background-color: #fff;
+	padding: 80px 0;
+	position: relative;
+	&_decorated {
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			bottom: -7px;
+			left: 50%;
+			transform: translateX(-50%);
+			background: url('../img/icons/devide.png') no-repeat center center;
+			background-size: 100% 100%;
+			width: 130px;
+			height: 14px;
+			z-index: 2;
+		}
+	}
+}
+p {
+	margin: 0 0 1em 0;
+	&:last-child {
+		margin: 0;
+	}
+}
+.title {
+	font-size: 36px;
+	font-weight: normal;
+	position: relative;
+	line-height: 1.38em;
+	margin: 0;
+	padding-bottom: 1.4em;
+	text-transform: uppercase;
+	.icon {
+		height: 1.38em;
+		width: 3.6em;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	&_style1 {
+		padding-left: 4.5em;
+	}
+	&_style2 {
+		padding-top: 2.5em;
+		line-height: 1.5em;
+	}
+}
+@media all and(max-width: 768px) {
+	.title {
+		font-size: 30px;
+	}
+}
+@media all and(max-width: 576px) {
+	.title {
+		font-size: 26px;
+		padding: 1.7em 0 1em 0 !important;
+		text-align: center;
+		.icon {
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+	.button_style1 {
+		padding: 15px 30px;
+		display: block;
+		width: 100%;
+	}
+	.block {
+		padding: 40px 0;
+	}
+	.block_decorated:after {
+		display: none;
+	}
+}
+
+@import "./partials/header";
+@import "./partials/home";
+@import "./partials/advantages";
+@import "./partials/about";
+@import "./partials/services";
+@import "./partials/activity";
+@import "./partials/gallery";
+@import "./partials/footer";

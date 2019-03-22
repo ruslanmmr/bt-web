@@ -1,0 +1,73 @@
+.services {
+  background-color: #fff;
+  &__content {
+    margin: -15px;
+    &_1 {
+      padding-bottom: 105px;
+    }
+    &_2 {
+      padding-top: 85px;
+      position: relative;
+      background: url(../img/icons/devide.png) no-repeat;
+      background-position: 15px 16px;
+      background-size: auto 15px;
+    }
+  }
+}
+.services-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  &__text {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.4em;
+  }
+  &__title {
+    margin-top: -85px;
+  }
+  .icon {
+    height: 70px;
+    margin-bottom: 30px;
+    &_style1 {
+      width: 70px;
+    }
+    &_style3 {
+      width: 51px;
+    }
+  }
+}
+
+@media all and(max-width: 992px) {
+  .services__content_1 {
+    padding-bottom: 80px;
+  }
+  .services__content_2 {
+    background: transparent;
+    padding: 0;
+    .services-block {
+      order: 2;
+    }
+  }
+  .services-block__title {
+    margin: 0;
+    order: 1;
+    .title {
+      padding: 0 0 1.4em 4.5em;
+    }
+  }
+}
+@media all and(max-width: 576px) {
+  .services__content_1 {
+    padding-bottom: 50px;
+  }
+  .services-block {
+    text-align: center;
+    align-items: center;
+    .icon {
+      margin-bottom: 15px;
+    }
+  }
+}

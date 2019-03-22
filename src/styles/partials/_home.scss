@@ -1,0 +1,70 @@
+.home {
+	padding: 150px 0 125px 0;
+	color: #fff;
+	background: #2e1b91 url(../img/backgrounds/bg-home.jpg) no-repeat center center;
+	background-size: cover;
+	&__container {
+		padding: 120px 0 130px 0;
+	}
+	&__title {
+		font-size: 48px;
+		font-weight: normal;
+		margin: 0;
+		letter-spacing: 0.04em;
+		line-height: 1.4em;
+		padding-bottom: 0.7em;
+	}
+	&__text {
+		font-size: 24px;
+		letter-spacing: 0.05em;
+		margin: 0;
+		line-height: 1.4em;
+		padding-bottom: 2.5em;
+	}
+}
+
+@media all and(max-width: 1200px) {
+	.home {
+		padding-top: 125px;
+		&__container {
+			padding: 100px 0;
+		}
+	}
+}
+@media all and(max-width: 992px) {
+	.home {
+		padding-top: 110px;
+		&__container {
+			padding: 80px 0;
+		}
+	}
+}
+@media all and(max-width: 768px) {
+	.home {
+		padding-top: 100px;
+		&__title {
+			font-size: 40px;
+		}
+		&__text {
+			br {
+				display: none;
+			}
+		}
+	}
+}
+@media all and(max-width: 576px) {
+	.home {
+		padding-top: 100px;
+		text-align: center;
+		&__container {
+			padding: 50px 0;
+		}
+		&__title {
+			font-size: 28px;
+			line-height: 1.2em;
+		}
+		&__text {
+			font-size: 18px;
+		}
+	}
+}
