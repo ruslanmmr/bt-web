@@ -86,7 +86,7 @@ p {
 	font-weight: normal;
 	position: relative;
 	margin: 0;
-	padding-bottom: 1.35em;
+	padding-bottom: 50px;
 	letter-spacing: 0.08em;
 	text-transform: uppercase;
 	.icon {
@@ -115,7 +115,7 @@ p {
 @media all and(max-width: 576px) {
 	.title {
 		font-size: 26px;
-		padding: 1.7em 0 1em 0 !important;
+		padding: 1.7em 0 25px 0 !important;
 		text-align: center;
 		.icon {
 			left: 50%;

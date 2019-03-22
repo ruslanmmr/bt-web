@@ -3,6 +3,7 @@ $(document).ready(function () {
   backgroundSizing();
   slider();
   clientsSlider();
+  header();
 });
 $(window).resize(function () {
   innerWidth = $('body').innerWidth();
@@ -13,13 +14,15 @@ var innerWidth = $('body').innerWidth(),
 
 function nav() {
   var navButton = $('.mobile-button, .overlay'),
-    nav = $('.nav');
+    nav = $('.nav'),
+    navLink = $('.nav__link');
 
   navButton.click(function (event) {
     event.preventDefault();
     nav.toggleClass('nav_active');
     navState();
   })
+  
   function navState() {
     if (nav.hasClass('nav_active')) {
       navButton.addClass('mobile-button_active');
@@ -39,11 +42,10 @@ function nav() {
       navState();
     }
   });
-
-
-  overlay.on('click', function () {
-    if (nav.hasClass('mobile-nav_active')) {
-      nav.removeClass('mobile-nav_active');
+  
+  navLink.on('click', function () {
+    if(innerWidth < 769) {
+      nav.removeClass('nav_active');
       navState();
     }
   })
@@ -137,4 +139,18 @@ function clientsSlider() {
       }
     ]
   });  
+}
+function header() {
+  function state() {
+    if ($(window).scrollTop() > 1){
+      $('.header').addClass("header_active");
+    }
+    else{
+      $('.header').removeClass("header_active");
+    }
+  }
+  state();
+  $(window).scroll(function() {
+    state();
+  });
 }
