@@ -1,0 +1,118 @@
+.clients {
+  &__content {
+    position: relative;
+  }
+  &__next,
+  &__prev {
+    border: 1px solid #d8d7d7;
+    transition: 0.3s;
+    outline: none;
+    background: transparent;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    cursor: pointer;
+    .icon {
+      fill: #d8d7d7;
+      width: 20px;
+      height: 20px;
+      transition: 0.3s;
+    }
+    &:hover {
+      border-color: #000;
+      .icon {
+        fill: #000;
+      }
+    }
+  }
+  &__prev {
+    transform: rotate(180deg);
+    left: -100px;
+  }
+  &__next {
+    right: -100px;
+  }
+}
+.clients-slider {
+  overflow: hidden;
+  .slick-list {
+    margin: 0 -30px;
+  }
+  .slick-track {
+    display: flex;
+  }
+  &__slide {
+    padding: 0 30px;
+    height: auto;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-shrink: 0;
+    img {
+      width: 100%;
+      height: auto;
+      filter: grayscale(100%);
+      transition: 0.3s;
+      opacity: 0.5;
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+      &:hover {
+        filter: grayscale(0);
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@media all and(max-width: 1370px) {
+  .clients__content {
+    padding: 0 75px;
+  }
+  .clients__prev {
+    left: 0;
+  }
+  .clients__next {
+    right: 0;
+  }
+}
+@media all and(max-width: 992px) {
+  .clients-slider__slide {
+    padding: 0 15px;
+  }
+  .clients-slider .slick-list {
+    margin: 0 -15px;
+  }
+  .clients-slider__slide img {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+@media all and(max-width: 768px) {
+  .clients-slider__slide img {
+    width: 100%;
+  }
+}
+@media all and(max-width: 576px) {
+  .clients-slider__slide {
+    height: 100%;
+  }
+  .clients-slider__slide img {
+    width: 80%;
+  }
+  .clients__content {
+    padding: 0 65px;
+  }
+}
+@media all and(max-width: 400px) {
+  .clients-slider__slide img {
+    width: 100%;
+  }
+} 

@@ -1,0 +1,55 @@
+.partners {
+  &__content {
+    margin-top: -25px;
+    margin-bottom: -25px;
+  }
+}
+.partners-block {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  &__title {
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 1em;
+    display: block;
+  }
+  &__section {
+    display: flex;
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+    &-title {
+      font-weight: 300;
+    }
+  }
+  &__rating-list {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 106px;
+    height: 17px;
+    margin-right: 15px;
+  }
+  &__rating-item {
+    width: 17px;
+    height: 17px;
+    background: url('../img/icons/star.png');
+    background-size: 100% 100%;
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
+}
+
+@media all and(max-width: 576px) {
+  .partners__content {
+    justify-content: center;
+    margin: -20px -15px;
+  }
+  .partners-block {
+    padding: 20px 15px;
+  }
+}

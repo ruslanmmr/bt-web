@@ -1,13 +1,39 @@
 .gallery {
+  &__content {
+    overflow: hidden;
+  }
   .container {
     max-width: 1300px;
+  }
+  &__container {
+    display: flex;
+    position: relative;
+    align-items: center;
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100vw;
+      height: 100%;
+      right: -15px;
+      transform: translateX(100%);
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+  }
+  &__controls {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
   }
   &__background {
     position: absolute;
     z-index: 1;
     width: 100%;
     height: 100%;
-    background: #4120a1;
+    background: #4120a1 url('../img/backgrounds/bg-slider.jpg') no-repeat center center;
+    background-size: cover;
     right: 0;
     top: 0;
   }
@@ -19,16 +45,181 @@
       fill: #fff; 
     }
   }
-  &__contaner {
-  }
   &__section {
     padding: 100px 15px;
     &_controls {
-      width: 35%;
+      width: 470px;
       position: relative;
+      flex-shrink: 0;
+      padding-left: 0;
+      padding-right: 0;
     }
     &_slider {
-      width: 65%;
+      flex: 1 1 100%;
+      padding-right: 0;
     }
+  }
+  &__section-content {
+    padding: 0 40px 0 65px;
+  }
+}
+.gallery-nav {
+  width: 140px;
+  color: #fff;
+  &__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  &__item {
+    transition: opacity 0.3s;
+    font-size: 32px;
+    opacity: 0.4;
+    box-sizing: content-box;
+    padding-right: 15px;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  .slick-track {
+    display: flex;
+    align-items: flex-end;
+  }
+  .slick-current {
+    font-size: 72px;
+    opacity: 1 !important;
+    width: 1.2em;
+    line-height: 1em;
+  }
+}
+.gallery-controls {
+  display: flex;
+  flex-direction: column;
+  &__next,
+  &__prev {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: 0.3s;
+    outline: none;
+    background: transparent;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    cursor: pointer;
+    .icon {
+      fill: #fff;
+      width: 20px;
+      height: 20px;
+    }
+    &:hover {
+      border-color: #fff;
+    }
+  }
+  &__prev {
+    margin-top: 17px;
+    .icon {
+      transform: rotate(180deg);
+    }
+  }
+}
+.gallery-slider {
+  margin-right: -15px;
+  .slick-list {
+    overflow: visible;
+  }
+  &__container {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+    outline: none;
+  }
+  &__slide {
+    padding: 0 15px;
+  }
+  &__image {
+    display: block;
+    position: relative;
+    &:before {
+      content: '';
+      display: block;
+      padding-top: 140%;
+    }
+    img {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: auto;
+      left: 0;
+      top: 50%;
+      transform: 
+      translateY(-50%);
+    }
+  }
+  &__title {
+    line-height: 1.5em;
+    font-weight: bold;
+    padding-top: 25px;
+    display: block;
+  }
+}
+
+@media all and(max-width: 992px) {
+  .gallery__section-content {
+    padding: 0 30px 0 0;
+  }
+  .gallery__section_controls {
+    width: 350px;
+  }
+  .gallery__section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+@media all and(max-width: 768px) {
+  .gallery__container {
+    display: block;
+    padding: 0;
+  }
+  .gallery__section-content {
+    padding: 0 15px;
+  }
+  .gallery__section_controls {
+    width: auto;
+    margin: 0 -15px;
+    padding: 40px 15px;
+  }
+  .gallery__title {
+    padding: 0 0 1.4em 4.5em;
+  }
+  .gallery-controls {
+    flex-direction: row;
+  }
+  .gallery-controls__prev {
+    margin: 0 17px 0 0;
+  }
+  .gallery-controls__next {
+    order: 2;
+  }
+  .gallery__section_slider {
+    padding: 40px 0 0 0;
+  }
+  .gallery-slider {
+    margin-right: 0;
+  }
+}
+@media all and(max-width: 576px) {
+  .gallery-slider .slick-list {
+    margin: 0 -15px;
+  }
+  .gallery-slider {
+    overflow: hidden;
+  }
+  .gallery__section_slider {
+    padding-top: 15px;
   }
 }

@@ -1,9 +1,56 @@
 .gallery.block.block_decorated
-  .container
-    .gallery__container.row
-      .gallery__section.gallery__section_controls
-        .gallery__background
-        h2.title.title_style2.gallery__title
-          svg.icon <use xlink:href="img/icons/icons-sprite.svg#ico2"></use>
-          | более 250 деловых и спортивных мероприятий
-      .gallery__section.gallery__section_slider
+  .gallery__content
+    .container
+      .gallery__container
+        .gallery__section.gallery__section_controls
+          .gallery__section-content
+            .gallery__background
+            h2.title.title_style2.gallery__title
+              svg.icon <use xlink:href="img/icons/icons-sprite.svg#ico2"></use>
+              | более 250 деловых<br> и спортивных мероприятий
+            .gallery__controls
+              .gallery-nav
+                ul.gallery-nav__list
+                  li.gallery-nav__item 01
+                  li.gallery-nav__item 02
+                  li.gallery-nav__item 03
+                  li.gallery-nav__item 04
+                  li.gallery-nav__item 05
+                  li.gallery-nav__item 06
+              .gallery-controls 
+                button.gallery-controls__next
+                  svg.icon <use xlink:href="img/icons/icons-sprite.svg#ico13"></use>
+                button.gallery-controls__prev
+                  svg.icon <use xlink:href="img/icons/icons-sprite.svg#ico13"></use>
+        .gallery__section.gallery__section_slider
+          .gallery-slider
+            .gallery-slider__slide
+              a(href="#").gallery-slider__container
+                .gallery-slider__image
+                  img(src="img/images/gallery1.jpg", alt="")
+                span.gallery-slider__title Генеральная Ассамблея<br> народов Евразии
+            .gallery-slider__slide
+              a(href="#").gallery-slider__container
+                .gallery-slider__image
+                  img(src="img/images/gallery2.jpg", alt="")
+                span.gallery-slider__title Генеральная Ассамблея<br> народов Евразии
+            .gallery-slider__slide
+              a(href="#").gallery-slider__container
+                .gallery-slider__image
+                  img(src="img/images/gallery3.jpg", alt="")
+                span.gallery-slider__title Генеральная Ассамблея<br> народов Евразии
+            .gallery-slider__slide
+              a(href="#").gallery-slider__container
+                .gallery-slider__image
+                  img(src="img/images/gallery1.jpg", alt="")
+                span.gallery-slider__title Генеральная Ассамблея<br> народов Евразии
+            .gallery-slider__slide
+              a(href="#").gallery-slider__container
+                .gallery-slider__image
+                  img(src="img/images/gallery2.jpg", alt="")
+                span.gallery-slider__title Генеральная Ассамблея<br> народов Евразии
+            .gallery-slider__slide
+              a(href="#").gallery-slider__container
+                .gallery-slider__image
+                  img(src="img/images/gallery3.jpg", alt="")
+                span.gallery-slider__title Генеральная Ассамблея<br> народов Евразии

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Exo+2:300,400,700&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Exo+2:300,400,500,700&subset=cyrillic');
 
 body {
   text-rendering: optimizeSpeed;
@@ -10,9 +10,16 @@ body {
   transition: transform 0.3s;
 	min-width: 320px;
 	background-color: #fafafa;
+	font-weight: 300;
+	max-width: 1920px;
+	margin: 0 auto;
 }
 p {
 	line-height: 1.5em;
+}
+* {
+  min-height: 0;
+  min-width: 0;
 }
 .container {
   max-width: 1170px;
@@ -41,6 +48,7 @@ p {
 		background-color: #fff;
 		padding: 15px 80px;
 		color: #000;
+		border: 0;
 		&:hover {
 			background-color: #000;
 			color: #fff;
@@ -77,9 +85,9 @@ p {
 	font-size: 36px;
 	font-weight: normal;
 	position: relative;
-	line-height: 1.38em;
 	margin: 0;
-	padding-bottom: 1.4em;
+	padding-bottom: 1.35em;
+	letter-spacing: 0.08em;
 	text-transform: uppercase;
 	.icon {
 		height: 1.38em;
@@ -94,6 +102,9 @@ p {
 	&_style2 {
 		padding-top: 2.5em;
 		line-height: 1.5em;
+	}
+	&_style3 {
+		color: #fff;
 	}
 }
 @media all and(max-width: 768px) {
@@ -131,4 +142,9 @@ p {
 @import "./partials/services";
 @import "./partials/activity";
 @import "./partials/gallery";
+@import "./partials/partners";
+@import "./partials/feedback";
+@import "./partials/clients";
+@import "./partials/reviews";
+@import "./partials/contacts";
 @import "./partials/footer";

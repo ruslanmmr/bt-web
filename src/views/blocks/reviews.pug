@@ -1,0 +1,19 @@
+mixin block()
+  .reviews-block.col-xl-3.col-md-4.col-sm-6.col-12
+    a(href="#").reviews-block__container
+      .reviews-block__content
+        span.reviews-block__title ООО<br> «Рога и копыта»
+        span.reviews-block__subtitle благодарственное письмо
+      svg.icon <use xlink:href="img/icons/icons-sprite.svg#ico14"></use>
+.reviews.block
+  .container
+    .reviews__container
+      h2.title.title_style1
+        svg.icon <use xlink:href="img/icons/icons-sprite.svg#ico2"></use>
+        | отзывы
+      .reviews__content.row
+        +block
+        +block
+        +block
+        +block
+        
