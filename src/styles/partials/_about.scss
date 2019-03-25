@@ -3,11 +3,24 @@
   &__content {
     justify-content: space-between;
   }
+  &__section {
+    &:nth-child(1) {
+      max-width: 488px;
+    }
+    &:nth-child(2) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      .about__text {
+        max-width: 500px;
+      }
+    }
+  }
   &__text {
     line-height: 1.6em;
     &_style1 {
       font-size: 24px;
-      margin-bottom: 1.9em;
+      margin-bottom: 2.5em;
       line-height: 1.4em;
     }
   }
@@ -24,12 +37,24 @@
     width: auto;
     box-sizing: content-box;
     padding: 15px;
+    opacity: 0.6;
   }
 }
 
 @media all and(max-width: 992px) {
   .about__image {
     height: 85px;
+  }
+}
+@media all and(max-width: 1099px) {
+  .about__section:nth-child(2) .about__text {
+    max-width: 100%;
+    br {
+      display: none;
+    }
+  }
+  .about__section:nth-child(1) {
+    max-width: 100%;
   }
 }
 @media all and(max-width: 768px) {

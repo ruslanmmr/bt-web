@@ -44,6 +44,9 @@
   .advantages-block__text {
     padding-left: 20px;
     padding-right: 20px;
+    br {
+      display: none;
+    }
   }
 }
 @media all and(max-width: 768px) {
