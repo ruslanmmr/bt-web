@@ -1,5 +1,4 @@
 $(document).ready(function () {
-  header();
   nav();
 });
 $(window).resize(function () {
@@ -57,18 +56,4 @@ function backgroundSizing() {
 
   bgGallery.width(bgGalleryWidth + ((innerWidth - containerGalleryWidth) / 2));
   bgContacts.width(bgContactsWidth + ((innerWidth - containerContactsWidth) / 2));
-}
-function header() {
-  function state() {
-    if ($(window).scrollTop() > 1){
-      $('.header').addClass("header_active");
-    }
-    else{
-      $('.header').removeClass("header_active");
-    }
-  }
-  state();
-  $(window).scroll(function() {
-    state();
-  });
 }
